@@ -3,23 +3,21 @@ import pytest
 
 
 PARAMS_TABLE = [
-    (0, 0, 1, 0),
-    (1, 1, 2, 2),
-    (2, 2, 3, 5),
-    (3, 3, 4, 11),
-    (4, 2, 5, 19),
-    (0, 1, 2, 1),
-    (1, 1, 3, 3),
-    (2, 1, 4, 5),
-    (3, 1, 5, 11),
-    (4, 1, 5, 17),
+    (1, 2, 1, 2),
+    (1, 3, 2, 3),
+    (5, 4, 1, 11),
+    (4, 5, 1, 7),
+    (3, 6, 1, 7),
+    (2, 2, 3, 3),
+    (1, 2, 4, 2),
+    (2, 2, 1, 1),
+    (3, 2, 4, 6),
+    (2, 4, 5, 5),
 ]
 
 
-
-
 def test_fibonacci():
-    """Test fibonacci"""
+    """Test fibnacci"""
     from series import fibonacci
     assert fibonacci(7) == 13
 
@@ -35,4 +33,3 @@ def test_sum_series(l, m, n, result):
     """Test sum series function"""
     from series import sum_series
     assert sum_series(l, m, n) == result
-
