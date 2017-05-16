@@ -25,3 +25,17 @@ def sum_series(n, a=0, b=1):
         return b
     return sum_series(n - 2) + sum_series(n - 1)
 
+
+if __name__ == "__main__":
+    print("""
+    This module defines functions that implement mathematical series.
+    fibonacci(n): Returns the nth value in the fibonacci series
+    >>> fibonacci(2)
+    1
+    lucas(n): Returns the nth value in the lucas series
+    >>> lucas(2)
+    3
+    sum_series(n): Returns the nth value in the fibonacci or lucas series
+    >>> sum_series(2, 2, 1)
+    3
+    """)
