@@ -1,4 +1,4 @@
-""" Define fibonacci and lucas function"""
+"""Define fibonacci and lucas function"""
 
 
 def fibonacci(n):
@@ -16,16 +16,11 @@ def lucas(n):
         return 1
     return lucas(n - 2) + lucas(n - 1)
 
+
 def sum_series(n, a=0, b=1):
-    """make function that work with both lucas and fibonacci"
-    if n  == 0:
+    """make function that work with both lucas and fibonacci"""
+    if n == 1:
         return a
-    if  n == 1:
+    if n == 2:
         return b
-    return sum_series(n - 2) + sum_series(n - 1)
-
-
-sum_series(n)
-sum_series(n, 2, 1)
-
-
+    return sum_series(n - 2, a, b) + sum_series(n - 1, a, b)
